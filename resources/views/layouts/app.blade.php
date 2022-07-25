@@ -94,7 +94,7 @@
                                 <div id="submenu-5" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="">Products</a>
+                                            <a class="nav-link" href="{{ url('product_list') }}">Products</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="">Create</a>

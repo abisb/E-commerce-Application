@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,5 +29,12 @@ Route::post('category/update', [CategoryController::class, 'update'])->name('cat
 //category routes end//
 
 //product routes//
-
+Route::get('product_list', [ProductController::class, 'index']);
+Route::get('product/listing', [ProductController::class, 'getproduct'])->name('product.listing');
+Route::get('product_create', [ProductController::class, 'product_create'])->name('product.create_index');
+Route::post('product/create', [ProductController::class, 'create'])->name('product.create');
+Route::post('product/create', [ProductController::class, 'create'])->name('product.create');
+Route::get('edit_prod/{id}/edit', [ProductController::class, 'edit'])->name('edit_prod.edit');
+Route::post('product/update', [ProductController::class, 'update'])->name('product.update');
+Route::get('/delete_prod/{id}/delete',  [CategoryController::class, 'delete'])->name('delete_prod');
 //product routes end//

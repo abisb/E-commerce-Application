@@ -18,15 +18,17 @@
     </div>
 @endif
 <div class="create_stud">
-    <a href="{{ url('category_create') }}" type="button" class="btn btn-primary" style="float: right;">Create Category +</a>
+    <a href="{{ url('product_create') }}" type="button" class="btn btn-primary" style="float: right;">Create Product +</a>
 </div>
 
-    <h2 class="mb-4">Category</h2>
+    <h2 class="mb-4">Products</h2>
     <table class="table table-bordered yajra-datatable">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Category Name</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Price</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -45,10 +47,12 @@
     var table = $('.yajra-datatable').DataTable({
         processing: true,
         serverSide: true,
-        ajax: "{{ route('category.listing') }}",
+        ajax: "{{ route('product.listing') }}",
         columns: [
             {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+            {data: 'product_name', name: 'product_name'},
             {data: 'category_name', name: 'category_name'},
+            {data: 'price', name: 'price'},
             {
                 data: 'action', 
                 name: 'action', 
