@@ -26,7 +26,7 @@
                                 <div class="card">
                                     <h5 class="card-header">Product Form</h5>
                                     <div class="card-body">
-                                    <form action="{{route('product.update')}}" method="POST" enctype="multipart/form-data" id="product_form">
+                                    <form action="{{route('product.create')}}" method="POST" enctype="multipart/form-data" id="product_form">
                                              @csrf
                                             <div class="form-group">
                                                 <label for="product_name" class="col-form-label">Product Name</label>

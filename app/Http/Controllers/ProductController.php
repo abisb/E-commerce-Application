@@ -8,6 +8,7 @@ use App\Models\Product;
 use DataTables;
 use Illuminate\Support\Str;
 use URL;
+use File;
 class ProductController extends Controller
 {
     public function index()
@@ -64,7 +65,11 @@ class ProductController extends Controller
         $input['price'] = $request->price;
         $input['category_id'] = $request->category_id;
         if(!empty($request->image)){
-        $imageName = str_random(15).time().'.'.$request->image->extension();     
+        $imageName = str_random(15).time().'.'.$request->image->extension(); 
+        $path = public_path('products');
+        if(!File::isDirectory($path)){
+            File::makeDirectory($path, 0777, true, true);
+        }    
         $request->image->move(public_path('products'), $imageName);
         $input['image'] = $imageName;
         }
