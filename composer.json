@@ -12,6 +12,7 @@
         "laravel/helpers": "^1.5",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
+        "nesbot/carbon": "^2.59",
         "yajra/laravel-datatables": "^1.5"
     },
     "require-dev": {

@@ -97,7 +97,7 @@
                                             <a class="nav-link" href="{{ url('product_list') }}">Products</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="">Create</a>
+                                            <a class="nav-link" href="{{ url('product_create') }}">Create</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -108,10 +108,10 @@
                                 <div id="submenu-3" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="">Orders</a>
+                                            <a class="nav-link" href="{{ url('order_list') }}">Orders</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="">Create</a>
+                                            <a class="nav-link" href="{{ url('order_create') }}">Create</a>
                                         </li>
                                     </ul>
                                 </div>
